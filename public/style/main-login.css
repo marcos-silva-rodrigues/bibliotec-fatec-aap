@@ -1,0 +1,152 @@
+#main-principal {
+    height: 100%;
+    min-height: 700px;
+
+    background-color: #FFF;
+    border: 2px solid var(--gradiente-black-escuro);
+    border-radius: 10px;
+    margin: 10px auto; 
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.centralizado .acess-login{
+    height: 90%;
+    width: 60%;
+    
+    
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+.centralizado .problemas-acesso{
+    height: 90%;
+    width: 40%;
+
+    border-left: 4px solid black;
+}
+
+.centralizado .acess-login h1{
+    font-size: 60px;
+    text-align: center;
+    color: var(--gradiente-black-escuro);
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+
+.centralizado .acess-login form{
+    background-color: var(--gradiente-black-claro);
+
+    padding: 30px 50px ;
+    margin-top: 50px;
+
+    border-radius: 20px;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.centralizado .acess-login form label{
+    color: var(--branco-escuro);
+    font-size: 20px;
+
+    letter-spacing: 2px;
+    text-align: left;
+
+    margin: 10px 0px;      
+}
+
+.centralizado .acess-login input[type ="text"],
+.centralizado .acess-login input[type ="password"]{
+    width: 400px;
+    height: 40px;
+    padding: 3px 10px;
+}
+.centralizado .acess-login input[type ="text"]:hover,
+.centralizado .acess-login input[type ="password"]:hover{
+    border-bottom: 3px solid #b62f21;
+}
+
+
+.centralizado .acess-login form .remember-me{
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.centralizado .acess-login form .remember-me label{
+    color: var(--branco-escuro);
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+.centralizado .acess-login form .remember-me input{
+    height: 13px;
+    width: 13px;
+}
+.centralizado .acess-login form .remember-me a{
+    color: #dcdde1;
+    font-weight: 700;
+}
+
+.centralizado .acess-login form .remember-me a:hover{
+    text-decoration: underline;
+}
+
+
+.centralizado .acess-login form .button-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -25px;
+    left: 150px;  
+}
+
+.centralizado .acess-login form .button-login input {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 3px 10px;
+    background-color: var(--vermelho-fatec);
+    color: white; 
+    font-size: 20px;   
+    cursor: pointer;
+}
+
+.centralizado .acess-login form .button-login input:hover{
+    border: 2px solid black;
+}
+
+.centralizado .problemas-acesso h1{
+    font-size: 40px;
+    color: var(--gradiente-black-escuro);
+    text-align: justify;
+    padding: 50px 40px;
+}
+
+.centralizado .problemas-acesso .outroDetalhe{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 0px 40px;
+}
+
+.centralizado .problemas-acesso .outroDetalhe p{
+    padding-bottom: 20px;
+}
+
+.centralizado .problemas-acesso .outroDetalhe p i{
+    font-weight: 700;
+}
+

@@ -1,0 +1,90 @@
+body{
+    height: 100%;
+    background-color: white;
+}
+
+main.centralizado{ 
+    margin-top: 50px;
+    margin-bottom: 260px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center; 
+}
+
+main .titulo-info{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+main .titulo-alterar{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+main .ver-info{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+main .mudar-login{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+main.centralizado fieldset{
+    border: none;
+    color: #848484;
+    border-top: 5px solid #A4A4A4;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 10px; 
+}
+
+main.centralizado div{
+    margin: 15px ;
+    color:#848484;
+}
+
+main.centralizado div div{
+   text-transform: uppercase;
+   display: flex;
+   font: 800 20px Secular One;
+   justify-content: flex-start;
+   margin-bottom: 20px;
+}
+
+main.centralizado div div label{
+    margin-right: 15px;
+}
+
+main.centralizado div div input{
+    border: 1px solid var(--gradiente-black-claro);
+    flex-grow:1;
+}
+
+main.centralizado .mudar-login{
+    display: flex;
+    flex-direction: column;
+}
+
+main.centralizado .mudar-login button{
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--branco-escuro);
+    background-color: var(--gradiente-black-claro);
+    border: 1px solid var(--gradiente-black-escuro);
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    align-self: flex-end;
+
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+
+main.centralizado .mudar-login button:hover{  
+    background: var(--vermelho-fatec);   
+}

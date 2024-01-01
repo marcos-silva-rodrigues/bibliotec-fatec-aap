@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblio-2.0</title>
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/books.css">
+    <link rel="stylesheet" href="style/footer.css">
+
+    <!--fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header-principal">
+
+        <div class="centralizado">
+
+            <div class="Logo">
+                <a href="/Home">
+                    <img src="images/logotipo-fatec.png" alt="Logo da fatec">
+                </a>
+            </div>
+
+            <div class="links">
+
+                <ul>
+                    <li> <a href="http://www.fatecitaqua.edu.br/fatecitaqua/view/fatec_itaqua/institucional.html"
+                            target="_blank" rel="noopener noreferrer"> Sobre </a> </li>
+                    <li> <a href="https://www.facebook.com/fatecitaquaquecetuba" target="_blank"
+                            rel="noopener noreferrer"> Facebook </a></li>
+                    <li> <a href="https://www.youtube.com/channel/UC6LUrLB2BOaw_J_LOHyaisA" target="_blank"
+                            rel="noopener noreferrer"> Youtube</a></li>
+                </ul>
+
+
+                <div class="login">
+                    <a href="/Conta" class="icone">
+                        <img src="images/login-user.png" alt="">
+                        Seja Bem vindo
+                    </a>
+                    <a href="/Home"> Logout</a>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <nav id="nav-principal">
+        <div class="centralizado">
+
+            <ul>
+                <li><a href="/homeLogado">Acervo</a></li>
+                <li><a href="/Donate">Doe um livro</a></li>
+                <li><a href="/Historico">Historico</a></li>
+                <li><a href="/Conta">Conta</a></li>
+            </ul>
+
+            <div class="seach">
+                <input type="text" name="txtBusca" id="txtBusca" placeholder="Busque um livro pelo nome">
+                <button onclick="filtrarPorNomeLogado()"><img src="images/seach.png" alt=""></button>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main>
+
+        <aside>
+
+            <header class="filtrar">
+
+                <div>
+                    <img src="images/filtro.png" alt="">
+                    <p>Filtrar</p>
+                </div>
+
+                <div class="seila">
+                    <div>
+                        <button onclick="limparFiltrosLogados()">Limpar</button>
+                        <button onclick="filtrarLogado()">Filtar</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="filter-option">
+
+                <!-- categoria do livro -->
+                <details open="true" class="categoria">
+                    <summary>Categoria</summary>
+
+                    {% for cat in categorias %}
+                    <div>
+                        <input type="checkbox" name="{{cat.nome}}" id="{{cat.nome}}" value="{{cat.id}}">
+                        <label for="{{cat.nome}}">{{cat.nome}}</label>
+                    </div>
+                    {% endfor %}
+
+
+                </details>
+
+                <!-- autor -->
+                <details class="autor">
+                    <summary>autor(a)</summary>
+
+
+                    {% for auth in autores %}
+                    <div>
+                        <input type="checkbox" name="{{auth.nome}}" id="{{auth.nome}}" value="{{auth.id}}">
+                        <label for="{{auth.nome}}">{{auth.nome}}</label>
+                    </div>
+                    {% endfor %}
+
+                </details>
+
+                <!-- editora -->
+                <details class="editora">
+                    <summary>Editora</summary>
+
+                    {% for editora in editoras %}
+                    <div>
+                        <input type="checkbox" name="{{editora}}" id="{{editora}}">
+                        <label for="{{editora}}">{{editora}}</label>
+                    </div>
+                    {% endfor %}
+
+                </details>
+
+
+                <!-- Ano -->
+                <details class="ano">
+                    <summary>Ano</summary>
+
+                    <div>
+                        <input type="checkbox" name="atual" id="atual">
+                        <label for="atual">2015 até atualmente </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="00_15" id="00_15">
+                        <label for="00_15">2000 até 2015</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="50_20" id="50_20">
+                        <label for="50_20">1950 até 2000</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="50" id="50">
+                        <label for="50">até 1950 </label>
+                    </div>
+                </details>
+
+                <!-- quantas paginas -->
+                <details class="paginas">
+                    <summary>Páginas</summary>
+
+                    <div>
+                        <input type="checkbox" name="200" id="200">
+                        <label for="200">até 200</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="200-600" id="200-600">
+                        <label for="200-600">200 até 600</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="600-1000" id="600-1000">
+                        <label for="600-1000">600 a 1000</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="1000+" id="1000+">
+                        <label for="1000+">1000 pra cima</label>
+                    </div>
+                </details>
+
+            </main>
+
+        </aside>
+
+        <div class="container-books">
+
+
+            {% if  book | length == 0 %}
+            <h1>Busca sem resultado </h1>
+            <p>sua combinação de busca não gerou nenhum resultado, tente novamente</p>
+            {% else %}
+            <main>
+
+                {% for livro in book %}
+                <div class="content-book">
+                    <figure>
+                        <img src="{{livro.imagens}}" alt="">
+                        <div>
+                            <figcaption>{{livro.titulo}}</figcaption>
+
+                            {% for autor in livro.autor %}
+                            <figcaption>{{autor}}</figcaption>
+                            {% endfor %}
+                        </div>
+                    </figure>
+                    <a href="http://localhost:5000/livro?id={{livro.id}}">Clique para ver</a>
+                </div>
+                {% endfor %}
+
+            </main>
+
+            {% endif %}
+
+
+
+            <!--
+            <footer style="background-color: red;"></footer>    
+            -->
+
+        </div>
+
+    </main>
+
+
+    <footer id="footer-principal">
+
+        <div class="centralizado">
+            <h1>FATEC ITAQUAQUECETUBA</h1>
+            <p>Av. Itaquaquecetuba, 711 - Vila Monte Belo, Itaquaquecetuba-SP</p>
+            <p>CEP 08577-010 </p>
+            <p>Telefone/Fax: (11) 4647 5226</p>
+        </div>
+
+    </footer>
+
+  
+    <script src="js/seachBook.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblio-2.0</title>
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/livro.css">
+
+    <!--fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header-principal">
+
+        <div class="centralizado">
+
+            <div class="Logo">
+                <a href="/Home">
+                    <img src="images/logotipo-fatec.png" alt="Logo da fatec">
+                </a>
+            </div>
+
+            <div class="links">
+
+                <ul>
+                    <li> <a href="http://www.fatecitaqua.edu.br/fatecitaqua/view/fatec_itaqua/institucional.html"
+                            target="_blank" rel="noopener noreferrer"> Sobre </a> </li>
+                    <li> <a href="https://www.facebook.com/fatecitaquaquecetuba" target="_blank"
+                            rel="noopener noreferrer"> Facebook </a></li>
+                    <li> <a href="https://www.youtube.com/channel/UC6LUrLB2BOaw_J_LOHyaisA" target="_blank"
+                            rel="noopener noreferrer"> Youtube</a></li>
+                </ul>
+
+                <div class="login">
+                    <a href="/Entrar" class="icone">
+                        <img src="images/login-user.png" alt="">
+                        Login
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <nav id="nav-principal">
+        <div class="centralizado">
+
+            <ul>
+                <li><a href="/Home">Acervo</a></li>
+                <li><a href="/Donate">Doe um livro</a></li>
+            </ul>
+
+            <div class="seach">
+                <input type="text" name="txtBusca" id="txtBusca" placeholder="Busque um livro">
+                <button onclick="filtrarPorNomeLogado()"><img src="images/seach.png" alt=""></button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main id="main-principal" class="centralizado">
+
+        <div class="descricao">
+
+            
+            <figure>
+                <img src="{{livro.imagens}}" alt="">
+            </figure>
+            
+
+            
+            <table>
+                <tr>
+                    <td colspan="2">{{livro.titulo}}</td>
+                </tr>
+                <tr>
+                    <td>subtitulo</td>
+                    <td>{{livro.subtitulo}}</td>
+                </tr>
+                <tr>
+                    <td>categoria</td>
+                    <td>{{livro.nome}}</td>
+                </tr>
+                <tr>
+                    <td>edição</td>
+                    <td>{{livro.edicao}} º Edição</td>
+                </tr>
+                <tr>
+                    <td>editora</td>
+                    <td>{{livro.editora}}</td>
+                </tr>
+                <tr>
+                    <td>autores</td>
+                    <td>{{livro.nome_autor}}</td>
+                </tr>
+                <tr>
+                    <td>paginas</td>
+                    <td>{{livro.paginas}}</td>
+                </tr>
+                <tr>
+                    <td>ano de publicação</td>
+                    <td>{{livro.ano_publicacao}}</td>
+                </tr>
+                <tr>
+                    <td>disponivel</td>
+                    <td>{{livro.disponivel}} Unidades</td>
+                </tr>
+               
+            </table>
+
+        </div>
+
+        <div class="sobre">
+            <p>
+                <strong>Descrição:</strong>
+                {{livro.sobre}}</p>
+        </div>
+
+        <div class="resto">
+            <div class="referencia">
+                Autor. Título: subtitulo. edição. Local: Editora, ano. página. volume.
+            </div>
+            
+            <a href="">Alugar</a>
+        </div>
+
+    </main>
+
+    <footer id="footer-principal">
+
+        <div class="centralizado">
+            <h1>FATEC ITAQUAQUECETUBA</h1>
+            <p>Av. Itaquaquecetuba, 711 - Vila Monte Belo, Itaquaquecetuba-SP</p>
+            <p>CEP 08577-010 </p>
+            <p>Telefone/Fax: (11) 4647 5226</p>
+        </div>
+
+    </footer>
+
+    <script src="js/seachBook.js"></script>
+</body>
+
+</html>

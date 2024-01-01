@@ -1,0 +1,46 @@
+:root{
+    --branco-escuro :  #f5f6fa;
+    --cinza-claro : #dcdde1;
+    --gradiente-black-escuro : #1e272e;
+    --gradiente-black-claro : #2C3A47;
+    --vermelho-fatec : #b62f21; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    position: relative;
+    width: 100%;
+    background-color: var(--cinza-claro);
+}
+
+h1{
+    font-family: 'Secular One', sans-serif;
+}
+
+p, label{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+input, textarea, select, button{
+    outline: 0;
+    border: none;
+}
+
+.centralizado{
+    width: 95%;
+    margin: 0px auto;
+}

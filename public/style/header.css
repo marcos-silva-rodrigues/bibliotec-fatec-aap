@@ -1,0 +1,107 @@
+#header-principal{
+    height: 80px;
+    width: 100%;
+
+    background: linear-gradient( var(--gradiente-black-escuro), var(--gradiente-black-claro)); 
+    border-bottom: 1px solid black;
+
+}
+
+header .centralizado{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .centralizado .Logo a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .centralizado .Logo a img{  
+    filter: grayscale(0) brightness(100);
+}
+
+header .centralizado .links{
+    display: flex;
+    align-items: center;
+}
+
+header .centralizado .links ul,
+header .centralizado .links ul li{
+    height: 100%;
+}
+
+header .centralizado .links ul li a{
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+    padding: 5px;
+    color: var(--cinza-claro);
+    display: inline-flex;
+    align-items: center;
+}
+
+header .centralizado .links ul li:hover {
+    border-bottom: 2px solid #FFFFFF;
+    font-style: italic;
+    background: var(--gradiente-black-escuro);
+}
+
+header .centralizado .links .login {
+    height: 50px;
+    margin-left: 10px;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .centralizado .links .login .icone{
+    height: 100%;
+    width: 150px;
+
+    font-weight: 700;
+    font-family: 'Secular One', sans-serif;
+    color: var(--cinza-claro);  
+    
+    border-radius: 10px;
+
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+header .centralizado .links .login a:not(.icone){
+    height: 80%;
+    width: 80px;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Secular One', sans-serif;
+    color: var(--cinza-claro);
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    margin-left: 10px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .centralizado .links .login .icone:hover{
+    background: var(--gradiente-black-escuro);
+}
+
+header .centralizado .links .login a:hover{
+    background: var(--gradiente-black-claro);
+}
+
+header .centralizado .links .login .icone img{
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}
+

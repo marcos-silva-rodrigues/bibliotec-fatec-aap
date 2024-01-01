@@ -1,0 +1,123 @@
+body{
+    height: 100%;
+    background-color: var(--branco-escuro);
+}
+
+main.centralizado{
+    margin-bottom: 100px;
+}
+
+main .grid-titulo{
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+}
+
+main .grid-titulo fieldset{
+    border: none;
+    color: #848484;
+    border-top: 5px solid #A4A4A4;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 10px;
+    
+}
+
+main .grid-titulo fieldset.titulo-historico{
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+main .grid-titulo fieldset.titulo-livro{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+main .grid-titulo fieldset.titulo-emprestimo{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+main .historico-card{
+    height: 150px;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.historico-card div {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .historico-card div h1{
+    
+    font-size: 18px;
+    color: var(--gradiente-black-claro);
+}
+
+.historico-card div p{
+    
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.historico-card .card-image{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    box-sizing: border-box;
+    
+}
+
+.historico-card .card-image img{
+    width: 90px;
+    height: 130px;
+    border-radius: 10px;
+    border: 2px solid var(--gradiente-black-escuro);
+}
+
+.historico-card .livro{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    
+}
+
+.historico-card .livro p{
+    align-self: flex-start;
+}
+
+.historico-card .edicao{
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+.historico-card .ano{
+    grid-column-start: 6;
+    grid-column-end: 6;
+}
+
+.historico-card .emprestimo{
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+
+.historico-card .status{
+    grid-column-start: 10;
+    grid-column-end: 10;
+}
+
+.historico-card .status img{
+    width: 90px;
+    height: 130px;
+    padding: 0px 0px 15px;
+}

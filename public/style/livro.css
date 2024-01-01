@@ -1,0 +1,105 @@
+#main-principal {
+    min-height: 400px;
+    background-color: #FFF; 
+    margin: 30px 20px; 
+    box-sizing: border-box;   
+}
+
+#main-principal div {
+    padding: 30px 25px;
+}
+
+.centralizado div.descricao{
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+.centralizado div.descricao figure{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--gradiente-black-escuro);
+    border-radius: 10px;  
+    background-size: contain; 
+    overflow: hidden;
+}
+
+.centralizado div.descricao figure img{
+    height: 100%;
+}
+
+
+.centralizado div.descricao table{
+    background-color: white;
+    margin-left: 10px;
+    width: 75%;
+
+}
+
+.centralizado div.descricao tr:first-child td{
+    text-align: center;
+    font-family: Secular One;
+    font-size: 40px !important;
+}
+
+.centralizado div.descricao tr td {
+    padding: 10px;
+    background-color: var(--branco-escuro);
+    font-size: 20px;
+    color: var(--gradiente-black-claro)
+}
+.centralizado div.descricao tr td:first-child{
+    font-size: 22px;
+    font-family: Secular One;
+    color: var(--gradiente-black-escuro);
+    text-transform: capitalize;
+    width: 30%;
+}
+
+.centralizado div.sobre{
+    margin: 30px;
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+}
+.centralizado div.sobre p {
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.centralizado div.sobre p strong{
+    font-size: 22px;
+    font-family: Secular One;
+    padding-right: 30px;
+}
+
+.centralizado div.resto{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centralizado div.resto a {
+    padding: 20px;
+    width: 20%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Secular One;
+    color: var(--cinza-claro);
+    text-decoration: none;
+    background-color: var(--vermelho-fatec);
+}
+
+.centralizado div.resto div{ 
+    width: 70%;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: var(--cinza-claro);
+}

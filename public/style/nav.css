@@ -1,0 +1,75 @@
+#nav-principal{ 
+    width: 100%;
+    height: 60px;
+    background-color: var(--vermelho-fatec);
+}
+
+nav .centralizado{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .centralizado div{
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+nav .centralizado ul,
+nav .centralizado ul li{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+nav .centralizado ul li:hover{
+    border-bottom: 3px solid #353b48;
+    
+}
+
+nav .centralizado ul li a{
+    font-family: 'Secular One', sans-serif;
+    padding: 15px;
+    color: var(--cinza-claro);
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+nav .centralizada ul li:hover{
+    border-bottom: 3px solid #353b48;
+    color: #dcdde1;
+}
+
+nav .centralizado .seach input{  
+    height: 40px;
+    width: 350px; 
+
+    padding-left: 20px;
+    border-radius: 6px 0px 0px 6px;
+    border: 3px solid #353b48;
+
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+
+nav .centralizado .seach button{  
+    background-color: #353b48;
+    border: none;
+    height: 40px;  
+    width: 80px;
+    cursor: pointer;
+    border-radius: 0px 6px 6px 0px;
+    border: 3px solid #353b48;
+}
+
+nav .centralizado .seach button img{
+    filter: brightness(100);
+}

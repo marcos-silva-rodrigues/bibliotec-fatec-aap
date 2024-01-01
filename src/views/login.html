@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblio-2.0</title>
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/main-login.css">
+    <link rel="stylesheet" href="style/footer.css">
+
+    <!--fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header-principal">
+
+        <div class="centralizado">
+
+            <div class="Logo">
+                <a href="/Home">
+                    <img src="images/logotipo-fatec.png" alt="Logo da fatec">
+                </a>
+            </div>
+
+            <div class="links">
+
+                <ul>
+                    <li> <a href="http://www.fatecitaqua.edu.br/fatecitaqua/view/fatec_itaqua/institucional.html"
+                            target="_blank" rel="noopener noreferrer"> Sobre </a> </li>
+                    <li> <a href="https://www.facebook.com/fatecitaquaquecetuba" target="_blank"
+                            rel="noopener noreferrer"> Facebook </a></li>
+                    <li> <a href="https://www.youtube.com/channel/UC6LUrLB2BOaw_J_LOHyaisA" target="_blank"
+                            rel="noopener noreferrer"> Youtube</a></li>
+                </ul>
+
+                <div class="login">
+                    <a href="/Entrar" class="icone">
+                        <img src="images/login-user.png" alt="">
+                        Login
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <nav id="nav-principal">
+        <div class="centralizado">
+
+            <ul>
+                <li><a href="/Home">Acervo</a></li>
+                <li><a href="/Donate">Doe um livro</a></li>
+            </ul>
+
+            <div class="seach">
+                <input type="text" name="txtBusca" id="txtBusca" placeholder="Busque um livro peleo nome">
+                <button onclick="filtrarPorNome()"><img src="images/seach.png" alt=""></button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main id="main-principal" class="centralizado">
+
+
+        <div class="acess-login">
+            <h1 >LOGIN</h1>
+            <form action="/login" method="POST">
+
+                <label for="txtLogin">Usuario</label>
+                <input type="text" name="txtLogin" id="txtLogin" placeholder="Insira seu RA ou e-mail">
+
+                <label for="txtPassword">Senha</label>
+                <input type="password" name="txtPassword" id="txtPassword" placeholder="Insira a senha">
+
+                <div class="remember-me">
+                    <div>
+                        <input type="checkbox" id="remember-me"src="" alt="" value="Entrar">
+                        <label for="remember-me"> Lembrar-me</label>
+                    </div>
+
+                    <a href="">Esqueceu sua senha?</a>
+                </div>
+
+                <div class="button-login">         
+                    <input type="submit" src="" alt="" value="Entrar">              
+               </div>
+
+            </form>
+
+
+
+        </div>
+
+        <div class="problemas-acesso">
+            <h1>Problemas de acesso ?</h1>
+            <div class="outroDetalhe">
+                <p>
+                    <i> * não sabe qual é seu login? </i>
+                    <br> Procure um funcionário da biblioteca para verificar se você já possui um cadastro. Lembrando que alunos são cadastrados automaticamente ao entrarem na faculdade e que o login é igual ao número de registro (RA) informado durante sua primeira matrícula.
+                </p>
+                <p>
+                    <i> * e-mail não está cadastrado corretamente?</i> 
+                    <br> Procure um funcionário da biblioteca e solicite a alteração do seu e-mail. Lembre-se que é sempre importante manter seus dados de contato atualizados na sua unidade.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-principal">
+
+        <div class="centralizado">
+            <h1>FATEC ITAQUAQUECETUBA</h1>
+            <p>Av. Itaquaquecetuba, 711 - Vila Monte Belo, Itaquaquecetuba-SP</p>
+            <p>CEP 08577-010 </p>
+            <p>Telefone/Fax: (11) 4647 5226</p>
+        </div>
+
+    </footer>
+
+    <script src="js/seachBook.js"></script>
+</body>
+
+</html>

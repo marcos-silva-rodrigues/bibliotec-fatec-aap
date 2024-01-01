@@ -1,0 +1,247 @@
+main{
+    min-height: 1000px;
+    display: flex;
+    margin: 10px 0;
+    width :100%;
+}
+
+/* Filtro */
+main aside{
+    margin:0px 20px;
+    width: 20%;  
+    box-sizing: border-box;
+    background-color: white;
+}
+
+main aside .filtrar{
+    text-align: center;
+    color: #343a40;
+    letter-spacing: 1px;
+    
+    font: 800 25px 'Secular One', sans-serif;
+}
+main aside .filtrar div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main aside .filtrar div img{
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+}
+
+main aside .filtrar div.seila .container-options{
+    flex-direction: column ;
+}
+
+.filtrar div div.container-options{
+    background-color: var(--cinza-claro);   
+    margin: 0px 25px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+   
+} 
+
+.filtrar div div.container-options .option {
+    align-items: center;
+}
+
+.filtrar div .container-options .option input{
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: lawngreen;
+}
+.filtrar  div.seila div:not(.container-options){
+    margin: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filtrar  div.seila div:not(.container-options) button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    background-color: var(--gradiente-black-claro);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.filtrar  div div:not(.container-options) button:hover{
+    background-color: var(--vermelho-fatec);
+    color: var(--cinza-claro);
+    font-weight: bold;
+}
+
+main aside .filter-option{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #343a40;
+    text-transform: capitalize;
+   
+}
+
+.filter-option details {
+    margin: 10px 0px;
+    background-color: var(--branco-escuro);
+}
+
+.filter-option details summary{
+    font: 800 18px 'Secular One', sans-serif;
+    outline-style:none;
+    padding: 10px 0px 10px 10px;
+
+}
+.filter-option details summary:hover,
+.filter-option details div:hover{
+    background-color:  #ecf0f1;
+    cursor: pointer;
+}
+
+.filter-option details div{
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 30px; 
+    font: 400 16px 'Noto Sans JP', sans-serif; 
+}
+.filter-option details div input{
+    width: 15px;
+    height: 15px;
+}
+
+/* Corpo */
+
+main .container-books{
+    width: 80%;
+    /*padding: 0px 20px;*/
+}
+
+/* Paginate header */
+main .container-books header{
+    border-bottom: 1px solid var(--gradiente-black-claro);
+}
+
+main .container-books header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .container-books header .ordenar label{
+    font-weight: bold;
+}
+
+main .container-books header .paginacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+main .container-books header .paginacao div.numbers{
+    display: flex;
+}
+
+main .container-books header .paginacao div:not(.numbers),
+main .container-books header .paginacao div.numbers div{
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--gradiente-black-escuro);
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+main .container-books header .paginacao div.numbers div:hover,
+main .container-books header .paginacao div.numbers div.active{
+    background-color: var(--gradiente-black-escuro);
+    color: var(--branco-escuro);
+}
+
+main .container-books header .ordenar{
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--gradiente-black-escuro);
+}
+
+main .container-books header .ordenar select{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: var(--branco-escuro);
+    color: var(--gradiente-black-escuro);
+}
+
+/* books */
+main .container-books main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+main .container-books main .content-book{
+    background-color: var(--branco-escuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .container-books main .content-book figure{
+    height: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container-books main .content-book figure img{ 
+    height: 70%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+main .container-books main .content-book figure div  figcaption{
+    font: 400 16px 'Secular One', sans-serif;
+    text-align: center;
+    color: var(--gradiente-black-claro);
+    padding-top: 10px;
+}
+
+main .container-books main .content-book figure div figcaption:first-child{
+    font-size: 20px;
+    color: var(--gradiente-black-escuro);
+}
+
+main .container-books main .content-book a{
+    text-decoration: none;
+    background-color: var(--vermelho-fatec);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font: 400 18px 'Noto Sans JP';
+    color: var(--branco-escuro);
+    letter-spacing: 1.5px; 
+    margin: 20px;
+}
+
+/* footer books */
+main .container-books footer{
+    height: 50px;
+}

@@ -1,0 +1,93 @@
+
+exports.seed = function(knex) {
+  // Deletes ALL existing entries
+  return knex('livro_autor').del()
+    .then(function () {
+      // Inserts seed entries
+      return knex('livro_autor').insert([
+        // programação
+        {livro_id : 1, autor_id : 44},
+        {livro_id : 2, autor_id : 66},
+        {livro_id : 2, autor_id : 65},
+        {livro_id : 3, autor_id : 35},
+        {livro_id : 4, autor_id : 49},
+        {livro_id : 5, autor_id : 59},
+        {livro_id : 6, autor_id : 46},
+        {livro_id : 7, autor_id : 39},
+        {livro_id : 8, autor_id : 43},
+        {livro_id : 9, autor_id : 43},
+        // administração
+        {livro_id : 10, autor_id : 6},
+        {livro_id : 11, autor_id : 56},
+        {livro_id : 12, autor_id : 56},
+        {livro_id : 13, autor_id : 15},
+        {livro_id : 14, autor_id : 15},
+        {livro_id : 15, autor_id : 23},
+        {livro_id : 16, autor_id : 38},
+        {livro_id : 17, autor_id : 52},
+        {livro_id : 17, autor_id : 66},
+        {livro_id : 18, autor_id : 57},
+        {livro_id : 19, autor_id : 26},
+        // matematica
+        {livro_id : 20, autor_id : 36},
+        {livro_id : 21, autor_id : 60},
+        {livro_id : 21, autor_id : 34},
+        {livro_id : 22, autor_id : 19},
+        {livro_id : 22, autor_id : 20},
+        {livro_id : 23, autor_id : 62},
+        {livro_id : 23, autor_id : 42},
+        {livro_id : 24, autor_id : 53},
+        {livro_id : 25, autor_id : 27},
+        {livro_id : 26, autor_id : 54},
+        {livro_id : 27, autor_id : 53},
+        {livro_id : 27, autor_id : 54},
+        {livro_id : 28, autor_id : 53},
+        {livro_id : 29, autor_id : 53},
+        {livro_id : 29, autor_id : 54},
+        {livro_id : 29, autor_id : 55},
+        // finanças
+        {livro_id : 30, autor_id : 37},
+        {livro_id : 31, autor_id : 11},
+        {livro_id : 31, autor_id : 12},
+        {livro_id : 31, autor_id : 48},
+        {livro_id : 31, autor_id : 13},
+        {livro_id : 32, autor_id : 28},
+        {livro_id : 33, autor_id : 40},
+        {livro_id : 33, autor_id : 41},
+        {livro_id : 33, autor_id : 61},
+        {livro_id : 34, autor_id : 61},
+        {livro_id : 35, autor_id : 8},
+        {livro_id : 35, autor_id : 17},
+        {livro_id : 36, autor_id : 16},
+        {livro_id : 37, autor_id : 5},
+        {livro_id : 38, autor_id : 33},
+        {livro_id : 39, autor_id : 56},
+        {livro_id : 40, autor_id : 8},
+        // ingles
+        {livro_id : 41, autor_id : 22},
+        {livro_id : 42, autor_id : 63},
+        {livro_id : 43, autor_id : 58},
+        {livro_id : 44, autor_id : 1},
+        {livro_id : 44, autor_id : 45},
+        {livro_id : 44, autor_id : 2},
+        {livro_id : 44, autor_id : 3},
+        {livro_id : 45, autor_id : 21},
+        // tecnologia da informação
+        {livro_id : 46, autor_id : 50},
+        {livro_id : 46, autor_id : 51},
+        {livro_id : 47, autor_id : 9},
+        {livro_id : 47, autor_id : 10},
+        {livro_id : 48, autor_id : 6},
+        {livro_id : 48, autor_id : 7},
+        {livro_id : 49, autor_id : 47},
+        {livro_id : 50, autor_id : 24},
+        {livro_id : 50, autor_id : 25},
+        {livro_id : 51, autor_id : 4},
+        {livro_id : 52, autor_id : 14},
+        {livro_id : 53, autor_id : 32},
+        {livro_id : 54, autor_id : 29},
+        {livro_id : 54, autor_id : 30},
+        {livro_id : 55, autor_id : 18}
+      ]);
+    });
+};
